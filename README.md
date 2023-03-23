@@ -4,7 +4,7 @@ Pioneer inspired theme for smaller screen resolutions. It has been designed to '
 Designed for use with the DDJ-400 with Raspberry Pi standalone mod ([link](https://www.youtube.com/watch?v=kyrJW7Vaf68)).
 
 ## Screenshot
-![skin_preview](https://github.com/timewasternl/Pioneered/blob/master/skin_preview.png?raw=true)
+![skin_preview](https://github.com/bencejuhaasz/Pioneered/blob/master/skin_preview.png?raw=true)
 
 ## Features
 * Tabbed view: Overview, Browse and Samples
