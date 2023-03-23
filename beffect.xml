@@ -12,7 +12,7 @@
                 </Connection>
 <PushButton>
         <ObjectName>EffectToggle</ObjectName>
-        <Size>0me,25max</Size>
+        <Size>0me,50max</Size>
         <NumberStates>2</NumberStates>
         <State>
           <Number>0</Number>
@@ -23,7 +23,7 @@
           <Text>Active</Text>
         </State>
         <Connection>
-          <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],enabled</ConfigKey>
+          <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect2],enabled</ConfigKey>
           <ConnectValueToWidget>true</ConnectValueToWidget>
         </Connection>
         <Connection>
@@ -34,8 +34,80 @@
           <ConfigKey>[EffectRack<Variable name="rack"/>_EffectUnit<Variable name="unit"/>_Effect<Variable name="effect"/>],meta</ConfigKey>
           <ConnectValueToWidget>false</ConnectValueToWidget>
         </Connection>
+</PushButton>
+<WidgetGroup>
+                <ObjectName>Param</ObjectName>
+                <Size>0me,50max</Size>
+                <Layout>horizontal</Layout>
+                <Children>
+                  <Label>
+                    <ObjectName>text</ObjectName>
+                    <Text>PARAM:</Text>
+                  </Label>
+                  <Number>
+     		   <TooltipId>parameter1</TooltipId>
+   		     <Connection>
+    		        <ConfigKey>[EffectRack1_EffectUnit1_Effect2],parameter1</ConfigKey>
+   		     </Connection>
+   		 </Number>
+                </Children>
+              </WidgetGroup>
+<WidgetGroup>
+    <Layout>horizontal</Layout>
+     <Children>
+<PushButton>
+        <ObjectName>LOW</ObjectName>
+        <Size>0me,50max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>LOW</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>LOW</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter1</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
       </PushButton>
-
+<PushButton>
+        <ObjectName>MID</ObjectName>
+        <Size>0me,50max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>MID</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>MID</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter2</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
+      </PushButton>
+<PushButton>
+        <ObjectName>HI</ObjectName>
+        <Size>0me,50max</Size>
+        <NumberStates>2</NumberStates>
+        <State>
+          <Number>0</Number>
+          <Text>HI</Text>
+        </State>
+        <State>
+          <Number>1</Number>
+          <Text>HI</Text>
+        </State>
+        <Connection>
+          <ConfigKey>[EffectRack1_EffectUnit1_Effect1],button_parameter3</ConfigKey>
+          <ConnectValueToWidget>true</ConnectValueToWidget>
+        </Connection>
+      </PushButton>
+</Children>
+  </WidgetGroup>
     </Children>
   </WidgetGroup>
 </Template>

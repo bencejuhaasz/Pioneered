@@ -1,3 +1,3 @@
 # Pioneered Icons
 
-All icons in this folder are sourced primarily from the Deere theme, which is included in Mixxx' default installation.
+Keylock and Quantize icons were sourced from the Deere theme, included in Mixxx's default installation.

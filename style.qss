@@ -1,15 +1,4 @@
-/* Pioneer Colours:
 
-Play button: #6ee128
-Cue button: #eb870f
-Slip button: #d73535
-Tabs on top: #c3d541
-Headers: #32323c
-Title bg: #112f5c
-Blue: #2d85cd
-White: #e5e6ea
-
-*/
 
 /* DEBUG
 * {
@@ -27,7 +16,7 @@ White: #e5e6ea
 
 QMenuBar, QMenuBar::item, QMenu, QMenu::item {
   background-color: black;
-  color: gray;
+  color: #222222;
 }
 
 QMenuBar::item:pressed, QMenu::item:selected, QMenu::item:pressed {
@@ -64,6 +53,7 @@ WPushButton[value="1"]:hover {
 /************************************************************************/
 /*     Deck                                                             */
 /************************************************************************/
+
 
 #Deck {
   border: 1px solid transparent;
@@ -112,7 +102,7 @@ WPushButton[value="1"]:hover {
 }
 
 #DeckHeader {
-  background-color: #112f5c;
+  background-color: #222222;
   padding: 2px;
 }
 
@@ -165,6 +155,29 @@ WPushButton[value="1"]:hover {
   qproperty-layoutAlignment: 'AlignHCenter | AlignTop';
 }
 
+/************************************************************************/
+/*     Effects                                                          */
+/************************************************************************/
+
+WEffectChainPresetSelector {
+  background-color: transparent;
+  color: #2d85cd;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px;
+  text-transform: uppercase;
+}
+
+#EffectToggle {
+  color: #222222;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#EffectToggle[value="1"] {
+  color: #2d85cd;
+}
+
 #TrackNumberWrapper, #DeckChannelTitleWrapper {
   qproperty-layoutAlignment: 'AlignHCenter | AlignVCenter';
 }
@@ -180,69 +193,11 @@ WPushButton[value="1"]:hover {
 }
 
 /************************************************************************/
-/*     BeatFX                                                           */
-/************************************************************************/
-
-#BeatFX_Container {
-  border: 2px solid #32323c;
-  margin-left: 4px;
-  qproperty-layoutAlignment: 'AlignCenter | AlignTop';
-}
-
-#BeatFX_Header {
-  background-color: #32323c;
-  qproperty-layoutAlignment: 'AlignHCenter | AlignVCenter';
-}
-
-#BeatFX_Title {
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#BeatFX_Unit[highlight="0"] {
-  padding: 1px;
-  border: 1px solid #32323c;
-}
-
-#BeatFX_Unit[highlight="1"] {
-  padding: 1px;
-  border: 1px solid #2d85cd;
-}
-
-/************************************************************************/
-/*     Effects                                                          */
-/************************************************************************/
-
-WEffectSelector {
-  background-color: transparent;
-  color: #2d85cd;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 4px;
-  text-transform: uppercase;
-}
-
-#EffectMeter {
-  padding: 0px 1px 0px 1px;
-}
-
-#EffectToggle {
-  color: gray;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-#EffectToggle[value="1"] {
-  color: #2d85cd;
-}
-
-/************************************************************************/
 /*     Library                                                          */
 /************************************************************************/
 
 #LibraryWrapper QScrollBar {
-  background-color: gray;
+  background-color: #222222;
 }
 
 #LibraryWrapper QScrollBar::handle:horizontal {
@@ -271,7 +226,7 @@ WEffectSelector {
 }
 
 #LibraryWrapper WTrackTableViewHeader::section {
-  background-color: #32323c;
+  background-color: #222222;
   color: #e5e6ea;
   font-weight: bold;
   margin: 2px;
@@ -281,16 +236,16 @@ WEffectSelector {
 #LibraryWrapper QTableView,
 #LibraryWrapper WLibraryTextBrowser {
   background-color: black;
-  alternate-background-color: #32323c;
+  alternate-background-color: #222222;
   selection-background-color: #e5e6ea;
   color: white;
   selection-color: black;
 }
 
 #LibraryWrapper WLibrarySidebar {
-  background-color: #32323c;
+  background-color: #222222;
   selection-background-color: #e5e6ea;
-  border-left: 4px solid gray;
+  border-left: 4px solid #222222;
   color: #e5e6ea;
   font-weight: bold;
   selection-color: black;
@@ -301,7 +256,7 @@ WEffectSelector {
 #LibraryWrapper QSpinBox,
 #LibraryWrapper QComboBox,
 #LibraryWrapper QComboBox QAbstractScrollArea {
-  background-color: #32323c;
+  background-color: #222222;
   color: #e5e6ea;
 }
 
@@ -311,7 +266,7 @@ WLabel {
 
 /* Library Search */
 #SearchBox {
-  background-color: #112f5c;
+  background-color: #222222;
   border-radius: 0;
   font-size: 20px;
   font-weight: bold;
@@ -319,10 +274,30 @@ WLabel {
   text-transform: uppercase;
 }
 
-/* Sidebar (hide/show) */
+/************************************************************************/
+/*     BeatFX                                                           */
+/************************************************************************/
+
+#BeatFX_Container {
+  border: 2px solid #222222;
+  margin-left: 10px;
+  qproperty-layoutAlignment: 'AlignCenter | AlignTop';
+}
+
+#BeatFX_Header {
+  background-color: #32323c;
+}
+
+#BeatFX_Title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 #SidebarContainer {
   background-color: #112f5c;
 }
+
 #SidebarButton {
   background-color: rgba(0,0,0,0.2);
   border: 2px solid lightgray;
@@ -331,17 +306,6 @@ WLabel {
   font-size: 16px;
   font-weight: bold;
   margin: 4px;
-}
-
-/* Checkbox in library "Played" column */
-#LibraryWrapper WTrackTableView::indicator:unchecked {
-  image: url(skin:icons/library_checkbox.svg);
-}
-#LibraryWrapper WTrackTableView::indicator:hover {
-  background-color: #2d85cd;
-}
-#LibraryWrapper WTrackTableView::indicator:checked {
-  image: url(skin:icons/library_checkbox_checked.svg);
 }
 
 /************************************************************************/
@@ -376,14 +340,6 @@ WLabel {
   qproperty-layoutAlignment: 'AlignLeft | AlignTop';
 }
 
-#WaveformInfo_Key_Icon {
-  background-color: #e5e6ea;
-  border-radius: 2px;
-  font-size: 14px;
-  margin: 4px;
-  padding: -6px -6px -3px -2px;
-}
-
 #WaveformInfo_KeylockButton {
   image: url(skin:icons/keylock.svg) no-repeat center center;
 }
@@ -405,13 +361,13 @@ WLabel {
 }
 
 #TabControls WPushButton[value="0"] {
-  border: 2px solid gray;
-  color: gray;
+  border: 2px solid #222222;
+  color: #222222;
 }
 
 #TabControls WPushButton[value="1"] {
-  border: 2px solid #c3d541;
-  color: #c3d541;
+  border: 2px solid #0054e2;
+  color: #0054e2;
 }
 
 /************************************************************************/
